@@ -1,55 +1,17 @@
 {
-  "hero": {
-    "eyebrow": "Mizarstvo po meri",
-    "title": "Jolly-S Mizarstvo",
-    "text": "Svetla, moderna in natančno izdelana notranja oprema za vaš dom.",
-    "image": "/images/uploads/hero.svg"
-  },
-  "intro": {
-    "eyebrow": "Naravni materiali",
-    "title": "Toplina lesa, čiste linije in uporabnost.",
-    "text": "Izdelujemo pohištvo po meri, ki se prilagodi prostoru, željam in načinu bivanja."
-  },
-  "projects": [
-    {
-      "title": "Kuhinja po meri",
-      "text": "Moderna kuhinja s čistimi linijami in veliko shranjevanja.",
-      "image": "/images/uploads/project-1.svg"
-    },
-    {
-      "title": "Dnevni prostor",
-      "text": "Topel les, skrite rešitve in natančna izvedba.",
-      "image": "/images/uploads/project-2.svg"
-    },
-    {
-      "title": "Vgradne omare",
-      "text": "Popoln izkoristek prostora po meri naročnika.",
-      "image": "/images/uploads/project-3.svg"
-    }
-  ],
-  "services": [
-    {
-      "title": "Kuhinje",
-      "text": "Kuhinje po meri od izmere do montaže."
-    },
-    {
-      "title": "Omare",
-      "text": "Vgradne, garderobne in predsobe."
-    },
-    {
-      "title": "Vrata",
-      "text": "Notranja vrata in leseni detajli."
-    },
-    {
-      "title": "Oprema",
-      "text": "Kopalnice, dnevne sobe in poslovni prostori."
-    }
-  ],
-  "contact": {
-    "title": "Pogovorimo se o vašem projektu.",
-    "text": "Pošljite povpraševanje ali pokličite za svetovanje.",
-    "phone": "041 622 220",
-    "email": "info@jolly-s.si",
-    "address": "Staje 8a, 1292 Ig"
-  }
+  "company": "Mizarstvo Jolly-S",
+  "address": "Staje 8A, 1292 Ig",
+  "phone": "041 622 220",
+  "email": "info@jolly-s.si",
+  "logo": "/images/uploads/logo.png",
+  "heroImage": "/images/uploads/hero.jpg",
+  "heroKicker": "Moderna arhitektura ambienta",
+  "heroTitle": "Prostori,\nustvarjeni\nza življenje.",
+  "heroText": "Premium mizarstvo po meri. Minimalizem, estetika in funkcionalnost v popolni harmoniji.",
+  "ctaPrimary": "Oglejte si projekte",
+  "ctaSecondary": "Kontaktirajte nas",
+  "processTitle": "Proces izdelave po meri.",
+  "processText": "Vsak projekt je edinstven. Naš proces zagotavlja popoln rezultat od prve ideje do zadnje podrobnosti.",
+  "footerTitle": "Imate idejo?\nUresničimo jo.",
+  "footerText": "Izbrani materiali, natančna izdelava in dovršeni detajli."
 }
