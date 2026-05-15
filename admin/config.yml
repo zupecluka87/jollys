@@ -2,60 +2,57 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: true
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-locale: "sl"
+site_url: "https://jollysdoo.netlify.app"
+display_url: "https://jollysdoo.netlify.app"
 
 collections:
   - name: "settings"
-    label: "Nastavitve strani"
+    label: "Urejanje strani"
     files:
-      - label: "Glavna stran"
-        name: "site"
+      - name: "site"
+        label: "Hero, teksti, projekti, kontakt"
         file: "data/site.json"
         format: "json"
         fields:
-          - { label: "Ime podjetja", name: "company", widget: "string" }
-          - { label: "Naslov", name: "address", widget: "string" }
-          - { label: "Telefon", name: "phone", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Logo", name: "logo", widget: "image" }
-          - { label: "Hero slika", name: "heroImage", widget: "image" }
-          - { label: "Hero mali tekst", name: "heroKicker", widget: "string" }
-          - { label: "Hero naslov", name: "heroTitle", widget: "text" }
-          - { label: "Hero opis", name: "heroText", widget: "text" }
-          - { label: "Gumb 1", name: "ctaPrimary", widget: "string" }
-          - { label: "Gumb 2", name: "ctaSecondary", widget: "string" }
-          - { label: "Naslov procesa", name: "processTitle", widget: "string" }
-          - { label: "Opis procesa", name: "processText", widget: "text" }
-          - { label: "Footer naslov", name: "footerTitle", widget: "text" }
-          - { label: "Footer tekst", name: "footerText", widget: "text" }
-
-  - name: "projectsdata"
-    label: "Projekti"
-    files:
-      - label: "Seznam projektov"
-        name: "projects"
-        file: "data/projects.json"
-        format: "json"
-        fields:
+          - label: "Hero sekcija"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Majhen napis", name: "eyebrow", widget: "string" }
+              - { label: "Glavni naslov", name: "title", widget: "string" }
+              - { label: "Opis", name: "text", widget: "text" }
+              - { label: "Hero slika", name: "image", widget: "image", hint: "Priporočeno 3200 x 1900 px JPG" }
+          - label: "Uvodna sekcija"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Majhen napis", name: "eyebrow", widget: "string" }
+              - { label: "Naslov", name: "title", widget: "string" }
+              - { label: "Tekst", name: "text", widget: "text" }
           - label: "Projekti"
-            name: "items"
+            name: "projects"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
               - { label: "Naslov projekta", name: "title", widget: "string" }
-              - { label: "Podnaslov", name: "subtitle", widget: "string", default: "Izbrani projekt" }
-              - { label: "Lokacija", name: "location", widget: "string" }
-              - { label: "Leto", name: "year", widget: "string" }
-              - { label: "Tip projekta", name: "type", widget: "string" }
-              - { label: "Opis", name: "description", widget: "text" }
-              - { label: "Glavna slika 1:1", name: "cover", widget: "image" }
-              - { label: "Detail slika 1:1", name: "detail", widget: "image" }
-              - label: "Galerija slik 1:1"
-                name: "gallery"
-                widget: "list"
-                field: { label: "Slika", name: "image", widget: "image" }
+              - { label: "Opis", name: "text", widget: "text" }
+              - { label: "Slika projekta", name: "image", widget: "image", hint: "Priporočeno 1600 x 1600 px" }
+          - label: "Storitve"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Naslov", name: "title", widget: "string" }
+              - { label: "Opis", name: "text", widget: "text" }
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Naslov", name: "title", widget: "string" }
+              - { label: "Tekst", name: "text", widget: "text" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Naslov", name: "address", widget: "string" }
