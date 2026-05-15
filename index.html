@@ -1,16 +1,70 @@
 <!doctype html>
 <html lang="sl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mizarstvo Jolly-S</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jolly-S Mizarstvo | Staje 8a, Ig</title>
+  <meta name="description" content="Jolly-S Mizarstvo — izdelava kuhinj, omar, kopalniškega pohištva, notranje opreme in projektov po meri." />
+  <meta property="og:title" content="Jolly-S Mizarstvo" />
+  <meta property="og:description" content="Svetla moderna stran za mizarstvo, projekte po meri in galerije." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="loading">Nalaganje strani...</div>
-<script src="/js/app.js"></script>
+  <header class="topbar">
+    <a class="brand" href="#domov" aria-label="Jolly-S domov">
+      <span class="brand-mark" id="brandLogoText">J</span>
+      <span><strong id="brandName">Jolly-S</strong><small id="brandSub">mizarstvo</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Odpri meni">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#projekti">Projekti</a><a href="#storitve">Storitve</a><a href="#materiali">Materiali</a><a href="#kontakt">Kontakt</a>
+      <button class="theme" id="themeBtn">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="domov" class="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow" id="heroEyebrow">Mizarstvo po meri</p>
+        <h1 id="heroTitle">Toplina lesa. Čiste linije. Narejeno po meri.</h1>
+        <p id="heroText">Izdelujemo kuhinje, omare, kopalniško pohištvo in celotne notranje rešitve za domove ter poslovne prostore.</p>
+        <div class="hero-actions"><a class="btn primary" href="#projekti">Poglej projekte</a><a class="btn" href="#kontakt">Pošlji povpraševanje</a></div>
+      </div>
+    </section>
+
+    <section class="intro reveal">
+      <h2 id="introTitle">Natančna izdelava, svetel moderen izgled in materiali, ki trajajo.</h2>
+      <p id="introText">Vsak kos pohištva prilagodimo prostoru, uporabi in željam naročnika. Od ideje do montaže.</p>
+    </section>
+
+    <section id="projekti" class="section">
+      <div class="section-head reveal"><p class="eyebrow">Galerija</p><h2>Izbrani projekti</h2></div>
+      <div class="filters reveal" id="filters"></div>
+      <div class="grid projects" id="projects"></div>
+    </section>
+
+    <section id="storitve" class="section pale">
+      <div class="section-head reveal"><p class="eyebrow">Kaj delamo</p><h2>Storitve</h2></div>
+      <div class="cards" id="services"></div>
+    </section>
+
+    <section id="materiali" class="materials reveal">
+      <div><p class="eyebrow">Materiali</p><h2 id="materialsTitle">Naravni materiali in vrhunska obdelava.</h2><p id="materialsText">Kombiniramo les, furnir, kompakt plošče, kamen, kovino in moderno okovje. Rezultat je funkcionalen prostor s karakterjem.</p></div>
+      <div class="material-image" id="materialsImage"></div>
+    </section>
+
+    <section id="kontakt" class="contact section">
+      <div class="contact-card reveal"><p class="eyebrow">Kontakt</p><h2 id="contactTitle">Začnimo vaš projekt.</h2><p id="contactText">Pošljite mere, skico ali fotografije prostora in pripravimo predlog.</p>
+        <div class="contact-lines"><a id="phone" href="tel:041622220">041 622 220</a><a id="email" href="mailto:info@jolly-s.si">info@jolly-s.si</a><span id="address">Staje 8a, 1292 Ig</span></div>
+      </div>
+      <form class="form reveal" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact"><input name="ime" placeholder="Ime" required><input name="email" type="email" placeholder="Email" required><textarea name="sporocilo" placeholder="Sporočilo" required></textarea><button class="btn primary" type="submit">Pošlji</button></form>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox"><button id="closeLightbox">×</button><img id="lightboxImg" alt="Projekt"></div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,61 +1,65 @@
 backend:
   name: git-gateway
   branch: main
-
-local_backend: true
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 locale: "sl"
-
 collections:
   - name: "settings"
-    label: "Nastavitve strani"
+    label: "Urejanje strani"
     files:
-      - label: "Glavna stran"
-        name: "site"
-        file: "data/site.json"
-        format: "json"
+      - file: "data/content.json"
+        label: "Glavna stran"
+        name: "content"
         fields:
-          - { label: "Ime podjetja", name: "company", widget: "string" }
-          - { label: "Naslov", name: "address", widget: "string" }
-          - { label: "Telefon", name: "phone", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Logo", name: "logo", widget: "image" }
-          - { label: "Hero slika", name: "heroImage", widget: "image" }
-          - { label: "Hero mali tekst", name: "heroKicker", widget: "string" }
-          - { label: "Hero naslov", name: "heroTitle", widget: "text" }
-          - { label: "Hero opis", name: "heroText", widget: "text" }
-          - { label: "Gumb 1", name: "ctaPrimary", widget: "string" }
-          - { label: "Gumb 2", name: "ctaSecondary", widget: "string" }
-          - { label: "Naslov procesa", name: "processTitle", widget: "string" }
-          - { label: "Opis procesa", name: "processText", widget: "text" }
-          - { label: "Footer naslov", name: "footerTitle", widget: "text" }
-          - { label: "Footer tekst", name: "footerText", widget: "text" }
-
-  - name: "projectsdata"
-    label: "Projekti"
-    files:
-      - label: "Seznam projektov"
-        name: "projects"
-        file: "data/projects.json"
-        format: "json"
-        fields:
-          - label: "Projekti"
-            name: "items"
-            widget: "list"
-            summary: "{{fields.title}}"
+          - label: "Logo in ime"
+            name: "site"
+            widget: "object"
             fields:
-              - { label: "Naslov projekta", name: "title", widget: "string" }
-              - { label: "Podnaslov", name: "subtitle", widget: "string", default: "Izbrani projekt" }
-              - { label: "Lokacija", name: "location", widget: "string" }
-              - { label: "Leto", name: "year", widget: "string" }
-              - { label: "Tip projekta", name: "type", widget: "string" }
-              - { label: "Opis", name: "description", widget: "text" }
-              - { label: "Glavna slika 1:1", name: "cover", widget: "image" }
-              - { label: "Detail slika 1:1", name: "detail", widget: "image" }
-              - label: "Galerija slik 1:1"
-                name: "gallery"
-                widget: "list"
-                field: { label: "Slika", name: "image", widget: "image" }
+              - {label: "Ime", name: "brandName", widget: "string"}
+              - {label: "Podnapis", name: "brandSub", widget: "string"}
+              - {label: "Črka logota", name: "logoLetter", widget: "string"}
+          - label: "Hero prva stran"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Mali naslov", name: "eyebrow", widget: "string"}
+              - {label: "Veliki naslov", name: "title", widget: "string"}
+              - {label: "Besedilo", name: "text", widget: "text"}
+              - {label: "Hero slika 3200x1900", name: "image", widget: "image"}
+          - label: "Uvod"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Besedilo", name: "text", widget: "text"}
+          - label: "Materiali"
+            name: "materials"
+            widget: "object"
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Besedilo", name: "text", widget: "text"}
+              - {label: "Slika", name: "image", widget: "image"}
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Besedilo", name: "text", widget: "text"}
+              - {label: "Telefon", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Naslov", name: "address", widget: "string"}
+          - label: "Storitve"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Besedilo", name: "text", widget: "text"}
+          - label: "Projekti"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Kategorija", name: "category", widget: "string"}
+              - {label: "Opis", name: "text", widget: "text"}
+              - {label: "Slika 1:1 1600x1600", name: "image", widget: "image"}
