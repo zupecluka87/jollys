@@ -1,0 +1,19 @@
+{
+  "brand": "Jolly-S Mizarstvo",
+  "address": "Staje 8a, 1292 Ig",
+  "phone": "041 622 220",
+  "email": "info@jolly-s.si",
+  "heroTitle": "Mizarstvo po meri za topel in moderen dom.",
+  "heroText": "Izdelujemo kuhinje, omare, kopalniško pohištvo, vrata in unikatne lesene detajle po meri.",
+  "ctaPrimary": "Poglej projekte",
+  "ctaSecondary": "Kontakt",
+  "aboutTitle": "Natančna izdelava, naravni materiali in čist dizajn.",
+  "aboutText": "Vsak projekt začnemo z razumevanjem prostora, vaših želja in funkcionalnosti. Končni rezultat je pohištvo, ki je uporabno, lepo in narejeno za dolgo življenjsko dobo.",
+  "services": ["Kuhinje po meri", "Vgradne omare", "Kopalniško pohištvo", "Lesene obloge", "Stopnice in vrata", "Unikatni projekti"],
+  "projects": [
+    {"title":"Moderna kuhinja", "image":"images/project-1.svg"},
+    {"title":"Dnevni regal", "image":"images/project-2.svg"},
+    {"title":"Vgradna omara", "image":"images/project-3.svg"},
+    {"title":"Naravni materiali", "image":"images/project-4.svg"}
+  ]
+}
