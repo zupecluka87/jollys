@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "title": "Stanovanje Ljubljana",
+      "subtitle": "Izbrani projekt",
+      "location": "Ljubljana, Slovenija",
+      "year": "2024",
+      "type": "Notranja oprema",
+      "description": "Popolna harmonija materialov, funkcionalnosti in elegance.",
+      "cover": "/images/uploads/project-main.jpg",
+      "detail": "/images/uploads/project-detail.jpg",
+      "gallery": [
+        "/images/uploads/process1.jpg",
+        "/images/uploads/process2.jpg",
+        "/images/uploads/process3.jpg",
+        "/images/uploads/process4.jpg"
+      ]
+    }
+  ]
+}
